@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Evolventa;
+  src: local("Evolventa"), url("../FONTS/Evolventa-Regular.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes scale {
+  from{
+    scale: 0%;
+    opacity: 0%;
+  }
+    50%{
+      opacity: 100%;
+    }
+  to{
+    scale: 100%;
+  }
+}
+
+@keyframes opacity {
+  from{
+    opacity: 0%;
+  }
+
+  to{
+    opacity: 100%;
+  }
+}
+
+
+.gallery {
+  align-items: center;
+}
+
+.LOVE {
+  width: 400px;
+  display:inline-block;
+  height: 400px;
+  margin: 5px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.702);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  scale: 100%;
+  transition: scale 300ms;
+
+  animation-name: scale;
+  animation-duration: 1s;
+}
+
+.LOVE:hover {
+  scale: 105%;
+  transition: scale 300ms;
+}
+
+.button {
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.love-button {
+  /* max-width: 480px; */
+  display: inline-block;
+  padding: 15px 140px;
+  border-radius: 15px;
+  background: rgb(209, 3, 65);
+  font-weight: 700px;
+  font-family: Evolventa;
+  text-align: center;
+  font-size: 19px;
+  color: #000000;
+  /* margin-top: 10px;; */
+  text-decoration: none;
+  transition: background 400ms;
+  animation-name: opacity;
+  animation-duration: 4s;
+}
+
+.love-button:hover {
+  background: #98002eaf;
+}

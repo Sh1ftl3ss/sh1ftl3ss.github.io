@@ -1,0 +1,271 @@
+@keyframes position_top{
+  from{
+    transform: translateY(-1000px);
+  }
+
+  to{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes position_reviews{
+  from{
+    transform: translateX(800px);
+  }
+
+  to{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes position_title {
+  from{
+    transform: translateX(-700px);
+  }
+
+  to{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes position_description {
+  from{
+    transform: translateX(-700px);
+    /* opacity: 0%; */
+  }  
+
+  /* 50%{
+    opacity: 50%;
+  } */
+
+  to{
+    transform: translateX(0px);
+    /* opacity: 100%; */
+  }
+}
+
+@keyframes opacity {
+   from{
+    opacity: 0%;
+   }
+
+   to{
+    opacity: 100%;
+   }
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: local("Museo Sans Cyrl"),
+    url("../FONTS/MuseoSansCyrl300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Evolventa;
+  src: local("Evolventa"), url("../FONTS/Evolventa-Regular.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Evolventa;
+  src: local("Evolventa Bold"), url("../FONTS/Evolventa-Bold.woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0px auto;
+  padding: 0px 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.container a {
+  color: #000;
+}
+
+.header__loveLink {
+  font-size: 32px;
+  font-family: "Museo Sans Cyrl";
+  color: #e93030;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  animation-name: position_top;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+
+}
+
+.header__loveLink a::before {
+  background: rgba(0, 0, 0, 0.702);
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0%;
+  position: absolute;
+  right: 100%;
+  transition: right 400ms, left 400ms;
+  margin-bottom: -5px;
+}
+
+.header__loveLink a:hover::before {
+  left: 0;
+  right: 0;
+  transition: right 400ms, left 400ms;
+}
+.container a:visited {
+  color: #3f3f3f;
+}
+.container img {
+  width: 60px;
+}
+
+.header {
+  padding: 25px 130px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 41px;
+}
+
+.hero-left {
+  max-width: 612px;
+}
+
+.hero-title {
+  font-family: Evolventa;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 120%;
+  color: #000;
+  margin-bottom: 35px;
+  /* margin-top: 0px; */
+  animation-name: position_title;
+  animation-duration: 2s;
+}
+
+.hero-description {
+  font-family: Evolventa;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 140%;
+  color: #000;
+  margin-bottom: 67px;
+  max-width: 545px;
+  animation-name: position_description;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+.love-button {
+  /* max-width: 480px; */
+  display: inline-block;
+  padding: 20px 140px;
+  border-radius: 15px;
+  background: rgb(209, 3, 65);
+  font-weight: 700px;
+  font-family: Evolventa;
+  text-align: center;
+  font-size: 19px;
+  color: #000000;
+  /* margin-top: 10px;; */
+  text-decoration: none;
+  transition: background 400ms;
+  
+  animation-name: opacity;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+.love-button:hover {
+  background: #98002eaf;
+}
+
+.hero-right {
+  max-width: 480px;
+  max-height: 1070px;
+}
+
+.AVATAR {
+  border-radius: 100px;
+}
+.hero-reviews {
+  display: flex;
+  scale: 100%;
+  transition: scale 400ms;
+  gap: 19px;
+  margin-bottom: 20px;
+  align-items: center;
+  animation-name: position_reviews;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  
+}
+
+.hero-reviews-content {
+  border-radius: 30px;
+  padding: 18px 20px 30px;
+  width: 348px;
+  height: 181px;
+  background: #fff;
+  box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hero-reviews:hover {
+  scale: 110%;
+  transition: scale 400ms;
+}
+
+.hero-reviews-name {
+  font-family: "Museo Sans Cyrl";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.hero-reviews-tariff {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1px 5px;
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Museo Sans Cyrl";
+  font-weight: 300;
+  line-height: 130%;
+  color: #1a1b16;
+  background: #f2f3f7;
+  margin-bottom: 20px;
+}
+
+.hero-reviews-review {
+  font-family: "Museo Sans Cyrl";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 120%;
+  color: #000;
+}
+
+.header__heartIcon{
+  animation-name: opacity;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+
+}
